@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/camelliap
+LOCAL_PATH := device/xiaomi/camellia
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -36,12 +36,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6833
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.mt6833 \
-    libgptutils \
-    libz \
-    libcutils
 
 PRODUCT_PACKAGES += \
     otapreopt_script \

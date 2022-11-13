@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_camelliap.mk
+    $(LOCAL_DIR)/twrp_camellia.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_camelliap-user \
-    twrp_camelliap-userdebug \
-    twrp_camelliap-eng
+    twrp_camellia-user \
+    twrp_camellia-userdebug \
+    twrp_camellia-eng
