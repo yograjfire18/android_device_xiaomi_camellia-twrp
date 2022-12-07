@@ -6,7 +6,24 @@
 #
 
 LOCAL_PATH := device/xiaomi/camellia
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # A/B
+ENABLE_VIRTUAL_AB := true
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor \
+    vbmeta \
+	system_ext
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -19,10 +36,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.mt6833 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.mt6833
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
