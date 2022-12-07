@@ -5,6 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Enable virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 LOCAL_PATH := device/xiaomi/camellia
 
 # VNDK
@@ -14,7 +17,6 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # A/B
-ENABLE_VIRTUAL_AB := true
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
